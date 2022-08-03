@@ -1,20 +1,41 @@
+import { Drawer } from "antd";
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { showDiscord } from "../../features/discordSlice";
 export default function Discord(params) {
+  const [visible, setVisible] = useState(true);
+  const [placement, setPlacement] = useState("right");
+  const dispatch = useDispatch();
+  const open = useSelector((state) => state.discord.value);
+  const showDrawer = () => {
+    setVisible(true);
+  };
+
+  const onClose = () => {
+    dispatch(showDiscord())
+  };
+
+  const onChange = (e) => {
+    setPlacement(e.target.value);
+  };
   return (
     <>
-      <div
-        id="drawer-right-example"
-        className="fixed z-40 h-screen p-4 overflow-y-auto bg-white right-1 w-80 dark:bg-gray-800"
-        tabIndex="-1"
-        aria-labelledby="drawer-right-label"
+      <Drawer
+       className=" bg-transparent"
+        placement={placement}
+        closable={false}
+        onClose={onClose}
+        visible={open}
+        key={placement}
       >
         <iframe
           src={"https://discord.com/widget?id=298777142643261442&theme=dark"}
-          className=" h-5/6 w-full"
+          className=" h-full w-full"
           allowtransparency="true"
           frameBorder="0"
           sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
         ></iframe>
-      </div>
+      </Drawer>
     </>
   );
 }

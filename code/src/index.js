@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import "assets/styles/tailwind.css";
+import 'antd/dist/antd.css';
 import Home from "view/home";
 import { store } from "./store";
 import { Provider } from "react-redux";

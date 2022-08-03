@@ -7,6 +7,8 @@ import striker from "../assets/img/15.png";
 import mong from "../assets/img/4.png";
 import lahn from "../assets/img/18.png";
 import witch from "../assets/img/11.png";
+import musa from "../assets/img/6.png";
+import bocit from "../assets/img/10000000001770715.bmp";
 
 import LOGO from "../assets/img/Gmark.png";
 import { useSelector, useDispatch } from "react-redux";
@@ -164,9 +166,9 @@ export default function Home(params) {
                 imgs={shia}
                 quotes=" Diam Menjadi Beban, Bergerak Nyusahin Orang."
               />
-              <Staff fm="Garasi" imgs={mong} quotes=" " />
-              <Staff fm="Retrieveer" imgs={dk} quotes=" " />
-              <Staff fm="Bocit" imgs={dk} quotes=" " />
+              <Staff fm="Garasi" imgs={musa} quotes="Topup Membuat Game Menjadi Lebih Indah" />
+              <Staff fm="Retrieveer" imgs={dk} quotes="Tetap Menyerah dan Jangan Semangat" />
+              <Staff fm="Bocit" imgs={bocit} quotes=" " />
               <Staff fm="Mayali" imgs={striker} quotes="Pantek" />
               <Staff fm="Gallar" imgs={lahn} quotes=" " />
               <Staff fm="Veresta" imgs={witch} quotes=" " />

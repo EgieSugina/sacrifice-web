@@ -6,6 +6,7 @@ import dk from "../assets/img/14.png";
 import striker from "../assets/img/15.png";
 import mong from "../assets/img/4.png";
 import lahn from "../assets/img/18.png";
+import witch from "../assets/img/11.png";
 
 import LOGO from "../assets/img/Gmark.png";
 import { useSelector, useDispatch } from "react-redux";
@@ -66,11 +67,11 @@ export default function Home(params) {
       {/* <Discord /> */}
       <section className="header relative items-center ">
         <div class="flex flex-wrap flex-column-center place-content-center place-items-center">
-          <div class=" w-1/3 xl:w-1/3  sm:w-full  sm:px-15  ">
+          <div class=" w-1/3 xl:w-1/3  sm:w-full  sm:px-15 xs:w-full xs:px-3 xs:pt-10">
             <div class="info text-align-left  ">
-              <div className=" text-white text-lg">
+              <div className=" text-gray-50 text-lg">
                 {/* <img src={judul} className=" w-8/12 xl:visible sm:invisible" /> */}
-                <h1 className=" pt-10 font-bold text-4xl text-gray-50">
+                <h1 className=" pt-10 font-bold text-4xl text-gray-50 pb-4">
                   Sacrifice - Indonesia Guild
                 </h1>
                 <span class=" text-2xl font-bold text-red-500 italic">
@@ -78,31 +79,31 @@ export default function Home(params) {
                 </span>
                 adalah guild PvX santuy nan asik dimana semua member dibebaskan
                 untuk bermain sesuai dengan playstyle masing-masing.
-                <p>Card content</p>
-                <p>
+               
+                <p className="pb-4">
                   {" "}
                   Mau <span class="   font-bold text-red-500  ">PvP </span>?
                   Monggooo.
                 </p>
-                <p>
+                <p className="pb-4" >
                   Mau <span class="   font-bold text-yellow-500  ">PvE </span>?
                   Silahkan grinding sampe gila.{" "}
                 </p>
-                <p>Mau <span class="   font-bold text-green-500  ">Life Skill </span>? Bebas!.</p>
-                <p>
+                <p className="pb-4" >Mau <span class="   font-bold text-green-500  ">Life Skill </span>? Bebas!.</p>
+                <p className="pb-4" >
                   Semua player boleh join! Newbie, veteran, returner, semuanya
                   boleh! Member kami selalu membantu satu sama lain, jadi ga
                   perlu khawatir nyasar saat bermain.
                 </p>
-                <p>
+                <p className="pb-4" >
                   Sacrifice juga mengadakan aktifitas guild untuk mempererat
                   hubungan antar-member, Node War {"("}T1{")"}, Miru party, dan lain-lainnya.
                 </p>
-                <p>
+                <p className="pb-4" >
                   Ga ada syarat aneh-aneh untuk join, cukup aktif dan loyal
                   saja!
                 </p>
-                <p>
+                <p className="pb-4" >
                   Ga ada minimum GS! Yuk join! Langsung join Discord kita atau
                   bisa langsung whisper makhluk-makhluk gaib di bawah.
                 </p>
@@ -124,8 +125,8 @@ export default function Home(params) {
               </div>
             </div>
           </div>
-          <div className="w-1/2 xl:w-1/2 sm:w-full  gap-4">
-            <div className="grid-cols-3 p-20 space-y-2   lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
+          <div className="w-1/2 xl:w-1/2 sm:w-full xs:w-full  gap-4">
+            <div className="grid-cols-3 p-20 space-y-2 xs:p-1 lg:p-20   lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
               <div className="w-full rounded">
                 {selectImages[0] && <img src={selectImages[0]} alt="image" />}
               </div>
@@ -157,7 +158,7 @@ export default function Home(params) {
           </div>
           <div className=" w-5/6 gap-4  py-5">
             <h1 className=" pt-10  text-white italic font-bold text-4xl">Contact Family</h1>
-            <div className="grid-cols-6 p-20 space-y-2   lg:space-y-0 lg:grid lg:gap-3   gap-2">
+            <div className="grid-cols-6 p-20 space-y-2  xs:p-1  lg:space-y-0 lg:grid lg:gap-3   gap-2">
               <Staff
                 fm="SumTingWong"
                 imgs={shia}
@@ -168,6 +169,7 @@ export default function Home(params) {
               <Staff fm="Bocit" imgs={dk} quotes=" " />
               <Staff fm="Mayali" imgs={striker} quotes="Pantek" />
               <Staff fm="Gallar" imgs={lahn} quotes=" " />
+              <Staff fm="Veresta" imgs={witch} quotes=" " />
             </div>
           </div>
         </div>

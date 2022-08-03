@@ -1,12 +1,8 @@
 const plugin = require("tailwindcss/plugin");
 const colors = require("tailwindcss/colors");
-
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
-  plugins: [require("flowbite/plugin")],
-  content: [
-    // ...
-    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
-  ],
+  important: true,
   darkMode: "class",
   purge: ["./src/**/*.js", "./public/index.html"],
   // purge: {
@@ -26,17 +22,10 @@ module.exports = {
   //   },
   // },
   theme: {
+    
     screens: {
-      sm: "480px",
-      md: "768px",
-      lg: "976px",
-      xl: "1440px",
-    },
-    colors: {
-      gray: colors.coolGray,
-      blue: colors.lightBlue,
-      red: colors.rose,
-      pink: colors.fuchsia,
+      'xs': '375px',
+      ...defaultTheme.screens,
     },
     fontFamily: {
       sans: ["Graphik", "sans-serif"],

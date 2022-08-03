@@ -85,7 +85,10 @@ body {
   transition: .2s all linear;
   text-decoration: initial;
 }
-
+p {
+  margin-top: 0;
+  margin-bottom: 0em !important;
+}
 .upsale-button span{
   position: relative;
   z-index: 1;

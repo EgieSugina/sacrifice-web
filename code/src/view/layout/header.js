@@ -13,7 +13,7 @@ export default function Header(params) {
           <a className="flex items-center">
             <img
               src={logo}
-              className="mr-3 h-6 sm:h-9  md:visible sm:invisible"
+              className="mr-3 h-6 sm:h-9  md:visible sm:invisible xs:invisible xs:-mr-4" 
               alt="Sacrifice"
             />
             <img

@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web Ini Dibuat Dengan Bismillah" />
-    <!-- Global site tag (gtag.js) - Google Ads: 787915803 -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=AW-787915803"
-    ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+      const callback = function (entries) {
+        entries.forEach((entry) => {
+          console.log(entry);
 
-      gtag("config", "AW-787915803");
-    </script>
-    <!-- Event snippet for Website traffic conversion page -->
-    <script>
-      gtag("event", "conversion", {
-        send_to: "AW-787915803/LFKqCJCl_9EDEJvI2vcC",
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fadeIn");
+          } else {
+            entry.target.classList.remove("animate-fadeIn");
+          }
+        });
+      };
+
+      const observer = new IntersectionObserver(callback);
+
+      const targets = document.querySelectorAll(".js-show-on-scroll");
+      targets.forEach(function (target) {
+        target.classList.add("opacity-0");
+        observer.observe(target);
       });
     </script>
 

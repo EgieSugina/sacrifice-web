@@ -7,6 +7,7 @@ import lahn from "../assets/img/18.png";
 import witch from "../assets/img/11.png";
 import musa from "../assets/img/6.png";
 import bocit from "../assets/img/10000000001770715.bmp";
+import BgModal from "../assets/img/large-icon.png";
 
 import { SendOutlined } from "@ant-design/icons";
 import { Button, Modal } from "antd";
@@ -97,8 +98,11 @@ export default function Home(params: any) {
         onOk={handleOk}
         confirmLoading={confirmLoading}
         onCancel={handleCancel}
-        
- 
+        bodyStyle={{
+          backgroundImage: "url("+BgModal+")",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+      }}
       >
         <Request />
       </Modal>

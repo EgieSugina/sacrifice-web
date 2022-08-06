@@ -1,6 +1,6 @@
 import judul from "../../assets/img/Judul.png";
 import logo from "../../assets/img/Gmark.png";
-import { useSelector, useDispatch } from "react-redux";
+import {   useDispatch } from "react-redux";
 import { showDiscord } from "../../features/discordSlice";
 import dc from "../../assets/img/dc.jpg";
 import React from "react";

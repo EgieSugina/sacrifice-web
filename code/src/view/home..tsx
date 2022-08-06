@@ -11,8 +11,8 @@ import BgModal from "../assets/img/large-icon.png";
 
 import axios from "axios";
 
-import { SendOutlined } from "@ant-design/icons";
-import { Button, Modal, Input, Select } from "antd";
+import { SendOutlined ,SmileOutlined} from "@ant-design/icons";
+import { Button, Modal, Input, Select, notification } from "antd";
 import { useState, useEffect } from "react";
 
 import React from "react";
@@ -61,10 +61,27 @@ export default function Home(params: any) {
     setConfirmLoading(true);
     setTimeout(() => {
       setVisible(false);
+      setFN("");
+      setCN("");
+      setDN("");
+      setMC("");
+      setAP("");
+      setAAP("");
+      setDP("");
+      setPesan("");
+      setData("");
+      openNotification()
       setConfirmLoading(false);
     }, 2000);
   };
-
+  const openNotification = () => {
+    notification.open({
+      message: 'Request Successfully Submitted',
+      description:
+        'Ok Nanti di Whisper / WM / DM / Japri Oleh Officer Kami.',
+      icon: <SmileOutlined style={{ color: '#108ee9' }} />,
+    });
+  };
   const handleCancel = () => {
     console.log("Clicked cancel button");
     setVisible(false);
@@ -90,8 +107,7 @@ export default function Home(params: any) {
         {
           title: "Request Join",
           url: `https://www.sea.playblackdesert.com/Adventure?searchType=2&searchKeyword=${FN}`,
-          description:
-            "Text message. You can use Markdown here. *Italic* **bold** __underline__ ~~strikeout~~ [hyperlink](https://google.com) `code`",
+          description: Pesan,
           fields: [
             {
               name: "Family Name",
@@ -103,7 +119,7 @@ export default function Home(params: any) {
               value: CN,
               inline: true,
             },
-            
+
             {
               name: "Class",
               value: MC,
@@ -129,6 +145,7 @@ export default function Home(params: any) {
               value: DN,
               inline: true,
             },
+             
           ],
           thumbnail: {
             url: "https://i0.wp.com/www.gimbot.com/wp-content/uploads/2020/02/black-spirit-bdm.jpg?fit=800%2C400&ssl=1",
@@ -214,7 +231,7 @@ export default function Home(params: any) {
           backgroundImage: "url(" + BgModal + ")",
           backgroundRepeat: "no-repeat",
           backgroundSize: "auto",
-          backgroundPosition:"50%"
+          backgroundPosition: "50%",
         }}
       >
         <div className="grid grid-cols-6 gap-6">
@@ -419,7 +436,7 @@ export default function Home(params: any) {
                 </p>
                 <Button
                   type="primary"
-                  className=" bg-red-600 border-red-600 animate-bounce mt-10"
+                  className=" bg-red-600 border-red-600 animate-bounce mt-10 mb-6"
                   shape="round"
                   icon={<SendOutlined />}
                   onClick={showModal}
